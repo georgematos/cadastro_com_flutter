@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_crud/components/user_tile.dart';
 import 'package:flutter_crud/data/dummy_users.dart';
 
 class UserList extends StatelessWidget {
@@ -12,7 +13,7 @@ class UserList extends StatelessWidget {
       body: ListView.builder(
         itemCount: users.length,
         itemBuilder: (context, index) =>
-            Text(users.values.elementAt(index).name),
+            UserTile(users.values.elementAt(index)),
       ),
     );
   }
