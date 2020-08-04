@@ -41,4 +41,11 @@ class UsersProvider with ChangeNotifier {
 
     notifyListeners();
   }
+
+  void remove(String id) {
+    if (id != null) {
+      _items.remove(id);
+      notifyListeners();
+    }
+  }
 }
